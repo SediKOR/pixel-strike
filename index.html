@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixel Strike</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+  </style>
+</head>
+<body>
+  <!-- Phaser 3 -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+
+  <!-- Utils (load first — scenes depend on them) -->
+  <script src="utils/LevelConfig.js"></script>
+  <script src="utils/SpriteFactory.js"></script>
+
+  <!-- Entities -->
+  <script src="entities/Bullet.js"></script>
+  <script src="entities/Enemy.js"></script>
+  <script src="entities/Player.js"></script>
+
+  <!-- Scenes -->
+  <script src="scenes/MenuScene.js"></script>
+  <script src="scenes/HUDScene.js"></script>
+  <script src="scenes/LevelScene.js"></script>
+  <script src="scenes/GameOverScene.js"></script>
+  <script src="scenes/GameScene.js"></script>
+
+  <!-- Boot -->
+  <script src="main.js"></script>
+</body>
+</html>
